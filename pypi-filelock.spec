@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-filelock
-Version  : 3.10.3
-Release  : 55
-URL      : https://files.pythonhosted.org/packages/23/9f/e3f9f759727c569f565251b7b14a5be07e8c7827b242df8ed584189cbca9/filelock-3.10.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/23/9f/e3f9f759727c569f565251b7b14a5be07e8c7827b242df8ed584189cbca9/filelock-3.10.3.tar.gz
+Version  : 3.10.7
+Release  : 56
+URL      : https://files.pythonhosted.org/packages/5b/65/5dfde43d5e4d7d31a2392bf4aa20e464b8aa0601f34fd9b050781291f666/filelock-3.10.7.tar.gz
+Source0  : https://files.pythonhosted.org/packages/5b/65/5dfde43d5e4d7d31a2392bf4aa20e464b8aa0601f34fd9b050781291f666/filelock-3.10.7.tar.gz
 Summary  : A platform independent file lock.
 Group    : Development/Tools
 License  : Unlicense
@@ -15,8 +15,8 @@ Requires: pypi-filelock-license = %{version}-%{release}
 Requires: pypi-filelock-python = %{version}-%{release}
 Requires: pypi-filelock-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(hatch_vcs)
 BuildRequires : pypi(hatchling)
+BuildRequires : pypi-hatch_vcs
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -61,10 +61,10 @@ python3 components for the pypi-filelock package.
 
 
 %prep
-%setup -q -n filelock-3.10.3
-cd %{_builddir}/filelock-3.10.3
+%setup -q -n filelock-3.10.7
+cd %{_builddir}/filelock-3.10.7
 pushd ..
-cp -a filelock-3.10.3 buildavx2
+cp -a filelock-3.10.7 buildavx2
 popd
 
 %build
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679672138
+export SOURCE_DATE_EPOCH=1680130073
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
