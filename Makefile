@@ -1,5 +1,5 @@
 PKG_NAME := pypi-filelock
-URL = https://files.pythonhosted.org/packages/e6/3d/c80975c1028f54e4f0fe6f727d9271362b749321144ea833216b18bfda93/filelock-3.11.0.tar.gz
+URL = https://files.pythonhosted.org/packages/24/85/cf4df939cc0a037ebfe18353005e775916faec24dcdbc7a2f6539ad9d943/filelock-3.12.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
