@@ -6,10 +6,10 @@
 # autospec commit: 250a666
 #
 Name     : pypi-filelock
-Version  : 3.13.0
-Release  : 64
-URL      : https://files.pythonhosted.org/packages/6c/93/59c180bd2d637ad8ff58bacd3187abdd1af3a76d26d34a2544cec93dbfcc/filelock-3.13.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/6c/93/59c180bd2d637ad8ff58bacd3187abdd1af3a76d26d34a2544cec93dbfcc/filelock-3.13.0.tar.gz
+Version  : 3.13.1
+Release  : 65
+URL      : https://files.pythonhosted.org/packages/70/70/41905c80dcfe71b22fb06827b8eae65781783d4a14194bce79d16a013263/filelock-3.13.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/70/70/41905c80dcfe71b22fb06827b8eae65781783d4a14194bce79d16a013263/filelock-3.13.1.tar.gz
 Summary  : A platform independent file lock.
 Group    : Development/Tools
 License  : Unlicense
@@ -69,10 +69,10 @@ python3 components for the pypi-filelock package.
 
 
 %prep
-%setup -q -n filelock-3.13.0
-cd %{_builddir}/filelock-3.13.0
+%setup -q -n filelock-3.13.1
+cd %{_builddir}/filelock-3.13.1
 pushd ..
-cp -a filelock-3.13.0 buildavx2
+cp -a filelock-3.13.1 buildavx2
 popd
 
 %build
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1698441112
+export SOURCE_DATE_EPOCH=1698699792
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
